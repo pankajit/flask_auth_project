@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Welcome to the Home Page!</h2>
+  {% if current_user.is_authenticated %}
+    <p>Hello, {{ current_user.username }}!</p>
+  {% else %}
+    <p>Please login or register.</p>
+  {% endif %}
+{% endblock %}
